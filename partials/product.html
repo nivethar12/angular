@@ -1,0 +1,12 @@
+<div class="products" ng-controller="productCtrl">
+    <div class="products-list">
+        <div class="product-item" ng-repeat="x in products">
+            <div class="products-name">{{x}}</div>
+            <div class="product-delete" ng-click="removeItem($index)">&#10006;</div>
+        </div>            
+    </div>
+    <div class="product-add-container">
+        <input type="text" class="product-input-txt" placeholder="Add a product" ng-model="addMe" />
+        <button class="product-add-btn" ng-click="addItem()">Add</button>
+    </div>
+</div>

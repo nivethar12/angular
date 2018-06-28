@@ -1,3 +1,9 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .taleo-header{
 	background-color: #435563;
     padding: 10px;
@@ -127,4 +133,63 @@ background-color:#435563;
 .mainDiv{
   padding:50px; 
   margin-left: -100px;
+}
+
+
+.products {
+    text-align: center;
+    width: 900px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+.products-list{
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    background: #ececec;
+    padding: 10px 0px;
+}
+
+.product-item {
+    text-align: left;
+    background: #ffffff;
+    margin: 2px 20px;
+    padding: 15px 20px;
+    display: flex;
+}
+
+.products-name {
+    flex:1;
+    margin-top: 5px;
+}
+.product-delete {
+    padding: 5px;
+    border: 1px solid #f7f7f7;
+    border-radius: 50%;
+    width: 31px;
+    text-align: center;
+    background: #eaeaea;
+    color: #656565;
+    cursor:pointer;
+}
+
+.product-add-container {
+    background: #ececec;
+    display: flex;
+    padding: 20px 20px;
+}
+
+.product-input-txt {
+    flex: 1;
+    padding: 15px;
+    border: 0px;
+}
+
+.product-add-btn {
+    width: 100px;
+    border: 0px;
+    background: #4caf50;
+    color: white;
 }
