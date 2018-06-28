@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+ <link href="css/shopping.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.3.0/angular-messages.js"></script>
+</head>
+
+<body ng-app="myShoppingApp">
+        <div class="taleo-header">
+            <div class="wrapper">
+                <div class="headerLogo">
+                   <a href="#" shape="rect"><img width="100" height="53" alt="shopping" src="images/shopping.png"></a>
+                </div>
+                    
+                   <a href="#login"class="navbar-brand" style="color: white;">Login </a>
+              
+                 
+                 </div>
+              
+        </div>
+
+<!--p><a href = "#login">logins</a></p>-->
+<!--p><a href = "#register">register</a></p>-->
+<div ng-view></div>
+
+<script type = "text/ng-template" id = "login.html">
+    <h2> Add Student </h2>
+    <!--{{message}}-->
+ </script>
+ 
+ <script type = "text/ng-template" id = "register.html">
+    <h2> View Students </h2>
+   <!-- {{message}}-->
+ </script>
+
+<script src="js/myShoppingApp.js"></script>
+<script src="js/controllers.js"></script>
+
+</body>
+</html>

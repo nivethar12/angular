@@ -1,0 +1,60 @@
+<div class="mainDiv" ng-controller="registerCtrl">
+       
+    <div class="form">
+             
+          <form class="form-horizontal" name="formSubmission" novalidate ng-submit="submitForm()">
+            
+            <div class="form-group">
+                <label for="inputUserName" class="col-sm-2 control-label" id="userLabelId">User Name</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputUserName" name="userName" ng-model="userInputRegister" required>
+                </div>
+            </div>
+
+            <div ng-messages="formSubmission.userName.$error" ng-if="formSubmission.userName.$touched" role="alert" style="color:red;width: 250px;" >
+                <p ng-message="required">This field is required.</p>
+                <p ng-message="text">Please enter a text.</p>
+              </div>
+
+            <div class="form-group">
+              <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" name="emailName1" ng-model="emailInputRegister" required>
+              </div>
+            </div>
+  
+            <div ng-messages="formSubmission.emailName1.$error" ng-if="formSubmission.emailName1.$touched" role="alert" style="color:red;width: 250px;" >
+              <p ng-message="required">This field is required.</p>
+              <p ng-message="email">Please enter a valid email address.</p>
+            </div>
+            
+            <div class="form-group">
+              <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword" name="pwdName1"  ng-model="pwdInputRegister" ng-minlength="6" ng-maxlength="12" required>
+              </div>
+  
+            </div>
+              <div ng-messages="formSubmission.pwdName1.$error" ng-if="formSubmission.pwdName1.$touched" role="alert" style="color:red;width: 250px;" >
+                <p ng-message="minlength">should have at least 6 characters.</p>
+                <p ng-message="maxlength">should have at most 12 characters.</p>
+                <p ng-message="required">Providing a password is mandatory.</p>
+              </div>
+  
+  
+  
+            
+            
+              
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" id="RegisterBtn">Create Account</button>
+              </div>
+            </div>
+            <div class="questionText">
+            Already have account? <a href="#login">Login Now!</a>
+            </div>
+          </form>
+          <h3>{{value}}</h3>
+      </div> 
+   </div>
